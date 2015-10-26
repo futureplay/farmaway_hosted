@@ -1,0 +1,18 @@
+.header .img {
+    position: relative;
+    top: -150px;
+    height: 1000px;
+    background: url(app_invite_preview.png) no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+@media (max-width: 600px) {
+    .header .img {
+        height: 600px;
+    }
+}
