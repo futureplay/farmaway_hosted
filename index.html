@@ -31,6 +31,17 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="jquery.flexslider-min.js"></script>
+    <script src="fontfaceobserver.js"></script>
+    <script>
+        var observeFont = function(fontName) {
+            var observer = new FontFaceObserver(fontName);
+            observer.check(null, 5000).then(function () {
+                $("body").addClass(fontName + "-ready")
+            });
+        }
+        observeFont('poetsenoneregular');
+        observeFont('montserratregular');
+    </script>
     <script>
         // Can also be used with $(document).ready()
         $(window).load(function() {
@@ -88,7 +99,7 @@
                     <img src="icon_appstore.png" alt="Download on the AppStore">
                 </a>
             </li>
-            <li>
+            <li class="social">
                 <a href="https://www.facebook.com/farmawaygame" class="track">
                     <img src="icon_facebook.png" alt="Farm Away - App Page">
                 </a>
@@ -149,27 +160,25 @@
     </div>
 </section>
 <section class="section-carousel container-fluid">
-    <div class="col-sm-12">
-        <div class="flexslider-container">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img src="screenshot1.png" />
-                    </li>
-                    <li>
-                        <img src="screenshot2.png" />
-                    </li>
-                    <li>
-                        <img src="screenshot3.png" />
-                    </li>
-                    <li>
-                        <img src="screenshot4.png" />
-                    </li>
-                    <li>
-                        <img src="screenshot5.png" />
-                    </li>
-                </ul>
-            </div>
+    <div class="flexslider-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="screenshot1.png" />
+                </li>
+                <li>
+                    <img src="screenshot2.png" />
+                </li>
+                <li>
+                    <img src="screenshot3.png" />
+                </li>
+                <li>
+                    <img src="screenshot4.png" />
+                </li>
+                <li>
+                    <img src="screenshot5.png" />
+                </li>
+            </ul>
         </div>
     </div>
 </section>
